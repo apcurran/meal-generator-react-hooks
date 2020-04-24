@@ -16,8 +16,10 @@ export default function Searchbar({ getMeals }) {
 
     return (
         <form onSubmit={ handleSubmit } className="searchbar">
-            <input onChange={ handleSearchChange } type="text"/>
-            <button type="submit">Get Recipe</button>
+            <div className="searchbar-group">
+                <input onChange={ handleSearchChange } type="text" className="searchbar__input"/>
+                <button type="submit" className="searchbar__submit">Get Recipe</button>
+            </div>
         </form>
     )
 }

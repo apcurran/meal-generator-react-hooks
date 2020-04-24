@@ -5,7 +5,7 @@ export default function MealCard({ title, imgSrc }) {
         <article className="meal">
             <h3 className="meal__title">{ title }</h3>
             <figure className="meal__figure">
-                <img src={ imgSrc } alt={ title } className="meal__img"/>
+                <img src={ imgSrc } alt={ title } className="meal__figure__img"/>
             </figure>
         </article>
     )

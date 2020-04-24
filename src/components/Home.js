@@ -29,16 +29,18 @@ export default function Home() {
     setMeals(data.meals);
   }
     return (
-        <div>
-            <h1>Hello Home</h1>
+        <div className="home">
+            <h1 className="home__title">Recipe Generator</h1>
             <Searchbar getMeals={ getMeals } />
-            { meals.map(meal => {
-                return (
-                    <Link to={ `/meals/${meal.idMeal}` } key={meal.idMeal}>
-                        <MealCard title={ meal.strMeal } imgSrc={ meal.strMealThumb } />
-                    </Link>
-                )
-            }) }
+            <main className="main-home">
+              { meals.map(meal => {
+                  return (
+                      <Link to={ `/meals/${meal.idMeal}` } key={meal.idMeal}>
+                          <MealCard title={ meal.strMeal } imgSrc={ meal.strMealThumb } />
+                      </Link>
+                  )
+              }) }
+            </main>
         </div>
     )
 }
