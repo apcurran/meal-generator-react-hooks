@@ -29,7 +29,7 @@ export default function Home() {
     setMeals(data.meals);
   }
     return (
-        <div className="home">
+        <div className="home wrapper">
             <h1 className="home__title">Recipe Generator</h1>
             <Searchbar getMeals={ getMeals } />
             <main className="main-home">

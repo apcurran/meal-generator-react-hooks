@@ -14,12 +14,16 @@ a {
   color: inherit;
 }
 
+p {
+  line-height: 1.6;
+}
+
 .App {
   min-height: 100vh;
   background: linear-gradient(to bottom, #fff, #edf2f7);
 }
 
-.home {
+.wrapper {
   width: 80rem;
   max-width: 92.5%;
   margin: 0 auto;
@@ -84,4 +88,25 @@ a {
   width: 100%;
   filter: brightness(.65);
   border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, .2);
+}
+
+.meal-details__title {
+  margin-bottom: .25rem;
+}
+
+.meal-details__category {
+  margin-bottom: 1.5rem;
+  color: #718096;
+}
+
+.meal-details__figure {
+  margin-bottom: 2rem;
+}
+
+.meal-details__figure__img {
+  max-width: 92.5%;
+  width: 40rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, .2);
 }

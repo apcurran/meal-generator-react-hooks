@@ -34,16 +34,13 @@ export default function MealDetails(props) {
     }
 
     return (
-        <div>
-            <h1>{ mealData.strMeal }</h1>
-            <h3>{ mealData.strCategory }</h3>
-            <figure>
-                <img src={ mealData.strMealThumb } alt={ mealData.strMeal }/>
+        <div className="meal-details wrapper">
+            <h1 className="meal-details__title">{ mealData.strMeal }</h1>
+            <h3 className="meal-details__category">{ mealData.strCategory }</h3>
+            <figure className="meal-details__figure">
+                <img className="meal-details__figure__img" src={ mealData.strMealThumb } alt={ mealData.strMeal }/>
             </figure>
-            <ol>
-
-            </ol>
-            <p>{ mealData.strInstructions }</p>
+            <p className="meal-details__instructions">{ mealData.strInstructions }</p>
         </div>
     )
 }
