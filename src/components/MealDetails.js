@@ -12,9 +12,7 @@ export default function MealDetails(props) {
         const API_URL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
         const response = await fetch(API_URL);
         const data = await response.json();
-        console.log(data.meals[0]);
 
-        getIngredientsFromDetails(data.meals[0]);
         setMealData(data.meals[0]);
     }
 

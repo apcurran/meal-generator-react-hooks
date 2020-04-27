@@ -14,7 +14,6 @@ export default function Home() {
     const API_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=vegan";
     const response = await fetch(API_URL);
     const data = await response.json();
-    console.log(data.meals);
     
     setMeals(data.meals);
   }
@@ -24,7 +23,6 @@ export default function Home() {
     const API_URL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
     const response = await fetch(API_URL);
     const data = await response.json();
-    console.log(data);
 
     setMeals(data.meals);
   }
