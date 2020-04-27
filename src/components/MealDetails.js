@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 export default function MealDetails(props) {
     const mealId = props.match.params.meal_id;
     const [mealData, setMealData] = useState([]);
-    const [ingredients, setIngredients] = useState([]);
 
     useEffect(() => {
         fetchMealDetails();
@@ -17,20 +16,6 @@ export default function MealDetails(props) {
 
         getIngredientsFromDetails(data.meals[0]);
         setMealData(data.meals[0]);
-    }
-
-    function getIngredientsFromDetails(details) {
-        let ingredientsArr = [];
-
-        for (let [key, value] of Object.entries(details)) {
-            if (key.includes("Ingredient") && value !== "") {
-                ingredientsArr.push(value);
-            }
-        }
-
-        console.log(ingredientsArr);
-
-        setIngredients();
     }
 
     return (
